@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { BrowserRouter as Router } from 'react-router-dom'
-import DataProvider from './Containers/DataProvider/DataProvider'
+import DataProvider from './DataProvider'
 
 class App extends Component {
   render () {

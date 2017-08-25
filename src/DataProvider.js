@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import faker from 'faker'
-import Layout from '../../Layout'
+import Layout from './Layout'
 
 class DataProvider extends Component {
   state = {
