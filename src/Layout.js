@@ -1,9 +1,14 @@
+import PropTypes from 'prop-types'
 import React, { Component } from 'react'
-import { Route, Switch } from 'react-router-dom'
+import * as AppPropTypes from './appPropTypes'
 import NavBar from './NavBar'
 import Routes from './Routes'
 
 class Layout extends Component {
+  static propTypes = {
+    data: AppPropTypes.data
+  }
+
   state = {
     options: []
   }
@@ -11,10 +16,10 @@ class Layout extends Component {
   render () {
     return (
       <div>
+        <NavBar options={ this.state.options } />
         <Routes
-          products={ this.props.products }
+          data={ this.props.data }
         />
-        <NavBar options={this.state.options} />
       </div>
     )
   }
